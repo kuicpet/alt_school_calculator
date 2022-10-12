@@ -6,9 +6,9 @@ const Wrapper = ({ children }) => {
 }
 
 export const Container = styled.div`
-  width: 340px;
-  height: 540px;
-  padding: 10px;
+  width: 18.25rem;
+  height: 30.75rem;
+  padding: 8px;
   border-radius: 10px;
   border: 2px solid black;
   //background-color: #485461;

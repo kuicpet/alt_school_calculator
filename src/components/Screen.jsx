@@ -11,7 +11,7 @@ const Screen = ({ value }) => {
 }
 
 export const Container = styled.div`
-  height: 100px;
+  height: 6.25rem;
   width: 100%;
   margin-bottom: 10px;
   padding: 0 10px;
