@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Wrapper, Screen, Button, ButtonBox } from './components'
+import { Wrapper, Screen, Button, ButtonBox, Footer } from './components'
 
 const btnValues = [
   ['C', '+-', '%', '/'],
@@ -13,7 +13,7 @@ const btnValues = [
 const toLocaleString = (num) =>
   String(num).replace(/(?<!\..*)(\d)(?=(?:\d{3})+(?:\.|$))/g, '$1 ')
 
-  // Format num and remove spaces
+// Format num and remove spaces
 const removeSpaces = (num) => num.toString().replace(/\s/g, '')
 
 const App = () => {
@@ -127,35 +127,38 @@ const App = () => {
   }
 
   return (
-    <Wrapper>
-      <Screen value={calc.num ? calc.num : calc.res} />
-      <ButtonBox>
-        {btnValues.flat().map((btn, i) => {
-          return (
-            <Button
-              key={i}
-              className={btn === '=' ? 'equals' : ''}
-              value={btn}
-              onClick={
-                btn === 'C'
-                  ? resetClickHandler
-                  : btn === '+-'
-                  ? invertClickHandler
-                  : btn === '%'
-                  ? percentClickHandler
-                  : btn === '='
-                  ? equalsClickHandler
-                  : btn === '/' || btn === 'X' || btn === '-' || btn === '+'
-                  ? signClickHandler
-                  : btn === '.'
-                  ? decimalClickHandler
-                  : numClickHandler
-              }
-            />
-          )
-        })}
-      </ButtonBox>
-    </Wrapper>
+    <>
+      <Wrapper>
+        <Screen value={calc.num ? calc.num : calc.res} />
+        <ButtonBox>
+          {btnValues.flat().map((btn, i) => {
+            return (
+              <Button
+                key={i}
+                className={btn === '=' ? 'equals' : ''}
+                value={btn}
+                onClick={
+                  btn === 'C'
+                    ? resetClickHandler
+                    : btn === '+-'
+                    ? invertClickHandler
+                    : btn === '%'
+                    ? percentClickHandler
+                    : btn === '='
+                    ? equalsClickHandler
+                    : btn === '/' || btn === 'X' || btn === '-' || btn === '+'
+                    ? signClickHandler
+                    : btn === '.'
+                    ? decimalClickHandler
+                    : numClickHandler
+                }
+              />
+            )
+          })}
+        </ButtonBox>
+      </Wrapper>
+      <Footer />
+    </>
   )
 }
 

@@ -11,7 +11,5 @@ export const Container = styled.div`
   padding: 8px;
   border-radius: 10px;
   border: 2px solid black;
-  //background-color: #485461;
-  //background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
 `
 export default Wrapper
