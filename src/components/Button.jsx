@@ -10,7 +10,6 @@ const Button = ({ className, value, onClick }) => {
 }
 
 export const Container = styled.button`
-  border: none;
   background-color: white;
   font-size: 1.5rem;
   color: black;
@@ -20,7 +19,6 @@ export const Container = styled.button`
   border: 2px solid black;
   outline: none;
   &:hover {
-    //background-color: rgb(61, 43, 184);
     background-color: black;
     color: white;
   }
