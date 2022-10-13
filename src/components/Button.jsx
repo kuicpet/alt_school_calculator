@@ -18,9 +18,18 @@ export const Container = styled.button`
   border-radius: 10px;
   border: 2px solid black;
   outline: none;
+  left: -4px;
+  top: -4px;
+  z-index: 2;
+  box-shadow: 1px 3px black ;
+  transition:0.1s ease-in-out ;
   &:hover {
     background-color: black;
     color: white;
+  }
+  &:active {
+    transform: translateY(4px) ;
+    box-shadow:0 0 0 ;
   }
 `
 export default Button

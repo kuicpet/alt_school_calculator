@@ -6,6 +6,7 @@ const ButtonBox = ({ children }) => {
 }
 
 export const Container = styled.div`
+  position: relative;
   width: 100%;
   height: calc(100% - 110px);
   display: grid;
